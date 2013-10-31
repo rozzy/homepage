@@ -36,37 +36,57 @@ html, body
 
   img.userpic
     float: left
-    margin-right: 20px
+    margin-right: 17px
     margin-top: -5px
 
   .main_links
-    margin: 15px 0
+    margin: 10px 0
 
 .left_s
-  margin-left: 96px
+  margin-left: 92px
   
   p.descr
-    width: 260px
+    width: 230px
     font-size: 14px
-    margin-top: 5px
+    margin-top: 18px
     margin-bottom: 10px
-
+    line-height: 18px
+  .dribbble
+    p.descr
+      width: 210px
+.blc
+  margin-bottom: 25px
 a.button
   width: 243px
-  margin-left: -30px
+  margin-left: -20px
   height: 34px
   display: block
-  font-size: 16px
+  font-size: 14px
   border: 1px solid $background
   margin-bottom: 3px
+  outline: none
   text-decoration: none
   background: $button-color url(button.png) no-repeat
   +transition(all .5s ease-out)
   span
     display: block
-    margin-top: 9px
-    margin-left: 25px
+    margin-top: 10px
+    margin-left: 33px
     color: inherit
-
-  &:hover
+  &:hover, &:focus
     background-color: $button-hover-color
+  &.github
+    color: $main-color
+    background-color: #D4D8DD
+    &:hover, &:focus
+      background-color: $main-color
+  &.dribbble
+    color: #E93277
+    background-color: #EDD9E8
+    &:hover, &:focus
+      background-color: #E93277
+  &.soundcloud
+    color: #E93277
+    background-color: #EDD9E8
+    &:hover, &:focus
+      background-color: #E93277
