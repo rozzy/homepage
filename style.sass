@@ -3,13 +3,22 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600)
 
 $sans-serif: 'Source Sans Pro', sans-serif
+
 $background: #EFF3F7
 $main-color: #414141
-$button-color: #D1E1F4
 
+$button-color: #D1E1F4
+$button-hover-color: #2D7DDC
+
+$link: #2D7DDC
+
+a, a:hover, a:visited
+  color: $link
+strong
+  font-weight: bold
 html, body
   font-family: $sans-serif
-  font-size: 100%
+  font-size: 16px
   background: $background
   color: $main-color
 
@@ -19,7 +28,7 @@ html, body
   margin-top: 100px
 
   h1
-    font-size: 200%
+    font-size: 32px
     margin-bottom: 5px
 
   span.city
@@ -30,22 +39,34 @@ html, body
     margin-right: 20px
     margin-top: -5px
 
-  .links
+  .main_links
     margin: 15px 0
 
 .left_s
-  margin-left: 74px
+  margin-left: 96px
+  
+  p.descr
+    width: 260px
+    font-size: 14px
+    margin-top: 5px
+    margin-bottom: 10px
 
 a.button
   width: 243px
+  margin-left: -30px
   height: 34px
   display: block
+  font-size: 16px
   border: 1px solid $background
   margin-bottom: 3px
   text-decoration: none
-  background: red url(button.png) no-repeat
-
+  background: $button-color url(button.png) no-repeat
+  +transition(all .5s ease-out)
   span
     display: block
     margin-top: 9px
     margin-left: 25px
+    color: inherit
+
+  &:hover
+    background-color: $button-hover-color
