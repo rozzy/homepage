@@ -3,11 +3,15 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600)
 
 $sans-serif: 'Source Sans Pro', sans-serif
+$background: #EFF3F7
 $main-color: #414141
+$button-color: #D1E1F4
+
 html, body
   font-family: $sans-serif
   font-size: 100%
-  background: #EFF3F7
+  background: $background
+  color: $main-color
 
 .container
   margin: 0 auto
@@ -25,3 +29,23 @@ html, body
     float: left
     margin-right: 20px
     margin-top: -5px
+
+  .links
+    margin: 15px 0
+
+.left_s
+  margin-left: 74px
+
+a.button
+  width: 243px
+  height: 34px
+  display: block
+  border: 1px solid $background
+  margin-bottom: 3px
+  text-decoration: none
+  background: red url(button.png) no-repeat
+
+  span
+    display: block
+    margin-top: 9px
+    margin-left: 25px
