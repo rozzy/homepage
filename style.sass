@@ -11,7 +11,7 @@
     @content
 
 $sans-serif: 'Source Sans Pro', sans-serif
-$mobile-margin-left: 45px
+$mobile-margin-left: 40px
 
 $background: #EFF3F7
 $main-color: #414141
@@ -106,7 +106,7 @@ a.button
     background-image: url(button@2x.png)
     background-size: 243px 34px
   +transition(all .5s ease-out)
-  &:hover, &:focus
+  &:hover, &:focus, &:active
     background-color: $button-hover-color
   span
     display: inline-block
@@ -130,54 +130,56 @@ a.button
     background-color: #D4D8DD
     span
       background-position: 1px -49px
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: $main-color
   &.dribbble
     color: #E93277
     background-color: #EDD9E8
     span
       background-position: 0 -70px
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: #E93277
   &.soundcloud
     color: #FF7700
     span
+      +mobile
+        margin-left: 5px
       background-position: -3px -90px
     background-color: #F0DCD4
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: #FF7700
   &.twitter
     color: #0093C7
     background-color: #CAE4F1
     span
       background-position: 0 -109px
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: #0093C7
   &.instagram
     color: #7A461E
     background-color: #DCD8D8
     span
       background-position: 0 -128px
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: #7A461E
   &.lastfm
     color: #DE001E
     background-color: #EBCED7
     span
       background-position: 0 -148px
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: #DE001E
   &.tumblr
     color: #3373A9
     background-color: #D2DFEC
     span
       background-position: 0 -170px
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: #3373A9
   &.pinterest
     color: #C4001F
     background-color: #E7CED8
     span
       background-position: 0 -196px
-    &:hover, &:focus
+    &:hover, &:focus, &:active
       background-color: #C4001F
