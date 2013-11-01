@@ -7,10 +7,11 @@
     @content
 
 =mobile
-  @media only screen and (min-device-width : 320px)  and (max-device-width : 480px)
+  @media (max-width: 600px), (min-width: 800px)
     @content
 
 $sans-serif: 'Source Sans Pro', sans-serif
+$mobile-margin-left: 45px
 
 $background: #EFF3F7
 $main-color: #414141
@@ -38,7 +39,8 @@ html, body
   margin-top: 100px
   padding-bottom: 100px
   +mobile
-    width: 400px
+    width: 300px
+    margin-top: 50px
 
   h1
     font-size: 32px
@@ -47,19 +49,31 @@ html, body
   span.city
     font-weight: 100
 
-  img.userpic
+  div.userpic
+    width: 74px
+    height: 74px
     float: left
     margin-right: 17px
     margin-top: -5px
-    =mobile
-      opacity: 0
+    background: url(userpic.png) no-repeat
+    +retina
+      background-url: url(userpic@2x.png)
+      background-size: 74px 74px
+    +mobile
+      float: none
+      display: block
+      margin-left: $mobile-margin-left
+      margin-bottom: 25px
 
   .main_links
     margin: 10px 0
-
+.info
+  +mobile
+    margin-left: $mobile-margin-left
 .left_s
   margin-left: 92px
-  
+  +mobile
+    margin-left: $mobile-margin-left
   p.descr
     width: 230px
     font-size: 14px
@@ -82,7 +96,6 @@ a.button
   outline: none
   text-decoration: none
   border: 1px solid $background
-  +box-shadow(inset 0 0 0 1px $background )
   background: $button-color url(button.png) no-repeat
   +retina
     background-image: url(button@2x.png)
