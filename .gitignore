@@ -12,7 +12,7 @@ build/*
 *.pbxuser
 *.xcworkspace
 xcuserdata
-
+.bundle
 # svn & cvs
 .svn
 CVS
